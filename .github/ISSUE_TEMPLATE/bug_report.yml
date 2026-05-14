@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a parser bug with a sanitized fixture.
+title: "Parser misses: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a parser issue. Please do not include private logs, credentials, customer data, or internal hostnames.
+  - type: textarea
+    id: fixture
+    attributes:
+      label: Sanitized log snippet
+      description: Paste the smallest sanitized log snippet that reproduces the issue.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: Paste the command you ran.
+      render: bash
+      value: "gha-fail-digest --format text path/to/log"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected output
+      description: What failure category or error line should have been selected?
+    validations:
+      required: true

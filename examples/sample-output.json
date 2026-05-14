@@ -1,0 +1,8 @@
+{
+  "category": "build_error",
+  "error_message": "src/index.ts(14,7): error TS2322: Type 'string' is not assignable to type 'number'.",
+  "failing_step_name": "npm run build",
+  "source_count": 1,
+  "stack_trace": [],
+  "suggested_fix_category": "fix compile/type errors"
+}

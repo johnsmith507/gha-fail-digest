@@ -1,0 +1,5 @@
+##[group]Run npm run build
+npm run build
+src/index.ts(14,7): error TS2322: Type 'string' is not assignable to type 'number'.
+src/server.ts(4,12): error TS2305: Module '"hono"' has no exported member 'Router'.
+##[error]Process completed with exit code 2.

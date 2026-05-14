@@ -1,0 +1,15 @@
+##[group]Run npm test
+FAIL src/cart.test.ts
+  cart totals
+    ✕ applies discounts
+
+  ● cart totals › applies discounts
+
+    expect(received).toEqual(expected)
+
+    Expected: 90
+    Received: 100
+
+      at Object.<anonymous> (src/cart.test.ts:17:21)
+
+##[error]Process completed with exit code 1.

@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest a small parser, output, or workflow improvement.
+title: "Feature: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What CI triage workflow would this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the smallest useful version of the change.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example input or output
+      description: Use synthetic or sanitized examples only.
+      render: text

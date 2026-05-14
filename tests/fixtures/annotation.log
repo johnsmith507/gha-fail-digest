@@ -1,0 +1,4 @@
+##[group]Run unit tests
+pytest tests
+::error file=src/payment.py,line=42,col=9::AssertionError: expected captured amount to equal invoice total
+Error: Process completed with exit code 1.

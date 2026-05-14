@@ -1,0 +1,10 @@
+2026-05-14T04:01:00.000Z ##[group]Run pytest
+2026-05-14T04:01:01.000Z pytest -q
+2026-05-14T04:01:02.000Z ============================= FAILURES =============================
+2026-05-14T04:01:02.000Z ________________________ test_total_includes_tax ________________________
+2026-05-14T04:01:02.000Z 
+2026-05-14T04:01:02.000Z     def test_total_includes_tax():
+2026-05-14T04:01:02.000Z >       assert total(10) == 11
+2026-05-14T04:01:02.000Z E       AssertionError: assert 10 == 11
+2026-05-14T04:01:02.000Z tests/test_billing.py:8: AssertionError
+2026-05-14T04:01:02.000Z ##[error]Process completed with exit code 1.

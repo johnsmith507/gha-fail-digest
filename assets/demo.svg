@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="500" viewBox="0 0 980 500" role="img" aria-labelledby="title desc">
+  <title id="title">gha-fail-digest terminal demo</title>
+  <desc id="desc">Terminal output showing a compact GitHub Actions failure summary.</desc>
+  <rect width="980" height="500" rx="18" fill="#111817"/>
+  <rect x="0" y="0" width="980" height="58" rx="18" fill="#1f2b28"/>
+  <circle cx="32" cy="29" r="8" fill="#e06c54"/>
+  <circle cx="58" cy="29" r="8" fill="#d6aa38"/>
+  <circle cx="84" cy="29" r="8" fill="#4fbd79"/>
+  <text x="120" y="35" fill="#c8d8d2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">gha-fail-digest</text>
+  <text x="36" y="104" fill="#93d6bf" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">$ gha-fail-digest --format text tests/fixtures/typescript.log</text>
+  <text x="36" y="158" fill="#eef7f2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22">Failing step: npm run build</text>
+  <text x="36" y="196" fill="#eef7f2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22">Category: build_error</text>
+  <text x="36" y="234" fill="#eef7f2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22">Suggested fix category: fix compile/type errors</text>
+  <text x="36" y="272" fill="#ffcf9c" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22">Error: src/index.ts(14,7): error TS2322</text>
+  <text x="36" y="310" fill="#ffcf9c" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22">Type 'string' is not assignable to type 'number'.</text>
+  <rect x="36" y="356" width="908" height="96" rx="10" fill="#17201d" stroke="#30413b"/>
+  <text x="60" y="394" fill="#c8d8d2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">Use the summary in issue notes, PR comments, incident handoffs,</text>
+  <text x="60" y="426" fill="#c8d8d2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">or as compact coding-agent context.</text>
+</svg>

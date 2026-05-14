@@ -1,0 +1,4 @@
+##[group]Run ruff check .
+src/app.py:12:5: F401 `json` imported but unused
+Found 1 error.
+##[error]Process completed with exit code 1.
