@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 REQUIRED_FILES = {
+    "action.yml",
     "README.md",
     "LICENSE",
     "CONTRIBUTING.md",
@@ -25,6 +26,7 @@ REQUIRED_FILES = {
     "docs/agent-handoff.md",
     "docs/examples.md",
     "docs/failure-patterns.md",
+    "docs/github-action.md",
     "examples/demo-transcript.md",
     "src/gha_fail_digest/cli.py",
     "src/gha_fail_digest/parser.py",
@@ -39,6 +41,7 @@ README_TERMS = [
     "no telemetry",
     "GITHUB_TOKEN",
     "failure patterns",
+    "GitHub Action",
 ]
 
 FORBIDDEN_PATH_PARTS = {

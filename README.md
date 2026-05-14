@@ -53,6 +53,22 @@ python -m pip install -e .
 gha-fail-digest tests/fixtures/typescript.log
 ```
 
+Use it as a GitHub Action in a workflow:
+
+```yaml
+- name: Summarize failed tests
+  if: failure()
+  uses: johnsmith507/gha-fail-digest@main
+  with:
+    path: test.log
+    format: markdown
+    output-file: gha-fail-digest.md
+```
+
+See [docs/github-action.md](docs/github-action.md) for a complete workflow that
+captures a failing test log, writes a Markdown digest, and uploads it as an
+artifact.
+
 Text output:
 
 ```bash
@@ -130,6 +146,8 @@ See [docs/agent-handoff.md](docs/agent-handoff.md) for a fuller template.
 See [docs/coding-agent-context.md](docs/coding-agent-context.md) for a practical
 walkthrough of turning failed GitHub Actions logs into clean coding-agent
 context.
+See [docs/github-action.md](docs/github-action.md) for GitHub Action usage in CI
+workflows.
 See [docs/failure-patterns.md](docs/failure-patterns.md) for the current
 failure patterns: TypeScript, Jest, pytest, lint, and GitHub annotations.
 
@@ -154,6 +172,8 @@ python scripts/verify_public_repo.py
 
 An optional GitHub Actions CI template is included at
 [docs/github-actions-ci.yml](docs/github-actions-ci.yml).
+The root [action.yml](action.yml) lets the tool run directly inside GitHub
+Actions workflows.
 
 ## Privacy Notes
 

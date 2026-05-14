@@ -1,0 +1,63 @@
+name: GitHub Actions Failure Digest
+description: Summarize GitHub Actions logs into compact CI failure context for humans and coding agents.
+branding:
+  icon: alert-triangle
+  color: red
+
+inputs:
+  path:
+    description: Log file, directory of logs, GitHub logs ZIP, run URL, or '-' for stdin.
+    required: true
+  format:
+    description: Output format: markdown, text, or json.
+    required: false
+    default: markdown
+  compact:
+    description: Emit compact JSON when format is json.
+    required: false
+    default: "false"
+  output-file:
+    description: Optional path to write the digest to.
+    required: false
+    default: ""
+
+outputs:
+  digest:
+    description: The rendered failure digest.
+
+runs:
+  using: composite
+  steps:
+    - name: Install gha-fail-digest
+      shell: bash
+      run: python -m pip install --disable-pip-version-check "$GITHUB_ACTION_PATH"
+
+    - name: Generate failure digest
+      shell: bash
+      env:
+        INPUT_PATH: ${{ inputs.path }}
+        INPUT_FORMAT: ${{ inputs.format }}
+        INPUT_COMPACT: ${{ inputs.compact }}
+        INPUT_OUTPUT_FILE: ${{ inputs.output-file }}
+      run: |
+        set -euo pipefail
+
+        args=(--format "$INPUT_FORMAT")
+        if [ "$INPUT_FORMAT" = "json" ] && [ "$INPUT_COMPACT" = "true" ]; then
+          args+=(--compact)
+        fi
+
+        output="$(gha-fail-digest "${args[@]}" "$INPUT_PATH")"
+
+        if [ -n "$INPUT_OUTPUT_FILE" ]; then
+          mkdir -p "$(dirname "$INPUT_OUTPUT_FILE")"
+          printf '%s\n' "$output" > "$INPUT_OUTPUT_FILE"
+        fi
+
+        {
+          echo "digest<<GHA_FAIL_DIGEST_EOF"
+          printf '%s\n' "$output"
+          echo "GHA_FAIL_DIGEST_EOF"
+        } >> "$GITHUB_OUTPUT"
+
+        printf '%s\n' "$output"
