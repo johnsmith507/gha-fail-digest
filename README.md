@@ -63,6 +63,7 @@ Use it as a GitHub Action in a workflow:
     path: test.log
     format: markdown
     output-file: gha-fail-digest.md
+    step-summary: true
 ```
 
 See [docs/github-action.md](docs/github-action.md) for a complete workflow that

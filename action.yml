@@ -20,6 +20,10 @@ inputs:
     description: Optional path to write the digest to.
     required: false
     default: ""
+  step-summary:
+    description: Append the digest to the GitHub Actions step summary.
+    required: false
+    default: "false"
 
 outputs:
   digest:
@@ -39,6 +43,7 @@ runs:
         INPUT_FORMAT: ${{ inputs.format }}
         INPUT_COMPACT: ${{ inputs.compact }}
         INPUT_OUTPUT_FILE: ${{ inputs.output-file }}
+        INPUT_STEP_SUMMARY: ${{ inputs.step-summary }}
       run: |
         set -euo pipefail
 
@@ -52,6 +57,10 @@ runs:
         if [ -n "$INPUT_OUTPUT_FILE" ]; then
           mkdir -p "$(dirname "$INPUT_OUTPUT_FILE")"
           printf '%s\n' "$output" > "$INPUT_OUTPUT_FILE"
+        fi
+
+        if [ "$INPUT_STEP_SUMMARY" = "true" ] && [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+          printf '%s\n' "$output" >> "$GITHUB_STEP_SUMMARY"
         fi
 
         {

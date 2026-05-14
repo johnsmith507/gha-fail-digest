@@ -44,6 +44,7 @@ jobs:
           path: test.log
           format: markdown
           output-file: gha-fail-digest.md
+          step-summary: true
 
       - name: Upload failure digest
         if: steps.test.outcome == 'failure'
@@ -65,6 +66,7 @@ jobs:
 | `format` | No | `markdown` | `markdown`, `text`, or `json`. |
 | `compact` | No | `false` | Emits compact JSON when `format` is `json`. |
 | `output-file` | No | | Writes the digest to a file for artifact upload or later steps. |
+| `step-summary` | No | `false` | Appends the digest to the GitHub Actions step summary. |
 
 ## Outputs
 
