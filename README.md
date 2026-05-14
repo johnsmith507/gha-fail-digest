@@ -32,6 +32,18 @@ for humans, coding agents, pull request comments, and incident notes.
 
 ## Quick Start
 
+Install the release wheel:
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install \
+  https://github.com/johnsmith507/gha-fail-digest/releases/download/v0.1.0/gha_fail_digest-0.1.0-py3-none-any.whl
+gha-fail-digest path/to/action.log
+```
+
+Or install from source:
+
 ```bash
 git clone https://github.com/johnsmith507/gha-fail-digest.git
 cd gha-fail-digest
