@@ -127,6 +127,9 @@ the error and run the narrowest test/build command that reproduces it.
 ```
 
 See [docs/agent-handoff.md](docs/agent-handoff.md) for a fuller template.
+See [docs/coding-agent-context.md](docs/coding-agent-context.md) for a practical
+walkthrough of turning failed GitHub Actions logs into clean coding-agent
+context.
 
 ## Categories
 
