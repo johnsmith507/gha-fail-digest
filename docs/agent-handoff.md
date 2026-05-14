@@ -14,7 +14,7 @@ Constraints:
 
 Failure summary:
 
-<paste gha-fail-digest JSON or text output here>
+<paste gha-fail-digest JSON, text, or Markdown output here>
 
 Expected result:
 - code or docs fix

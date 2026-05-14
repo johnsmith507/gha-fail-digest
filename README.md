@@ -1,6 +1,7 @@
 # gha-fail-digest
 
-Local CLI for summarizing failed GitHub Actions logs into compact JSON or text.
+Local CLI for summarizing failed GitHub Actions logs into compact JSON, text,
+or Markdown.
 
 `gha-fail-digest` is built for developers and coding agents that need the useful
 part of a CI failure without pasting thousands of log lines into an issue,
@@ -22,10 +23,17 @@ pull request, incident note, or agent prompt.
 It does not call any AI API, collect telemetry, or send local logs anywhere.
 URL mode talks only to GitHub's API from your machine.
 
+## Why Use It
+
+Failed GitHub Actions logs are noisy, especially when a coding agent only needs
+the failing step, primary error, stack trace, and nearby context. This tool is a
+small GitHub Actions failure parser that turns local CI logs into a clean handoff
+for humans, coding agents, pull request comments, and incident notes.
+
 ## Quick Start
 
 ```bash
-git clone https://github.com/YOUR-ACCOUNT/gha-fail-digest.git
+git clone https://github.com/johnsmith507/gha-fail-digest.git
 cd gha-fail-digest
 python3 -m venv .venv
 . .venv/bin/activate
