@@ -130,6 +130,8 @@ See [docs/agent-handoff.md](docs/agent-handoff.md) for a fuller template.
 See [docs/coding-agent-context.md](docs/coding-agent-context.md) for a practical
 walkthrough of turning failed GitHub Actions logs into clean coding-agent
 context.
+See [docs/failure-patterns.md](docs/failure-patterns.md) for the current
+failure patterns: TypeScript, Jest, pytest, lint, and GitHub annotations.
 
 ## Categories
 

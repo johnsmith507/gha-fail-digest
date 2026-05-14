@@ -12,7 +12,17 @@ license = { text = "MIT" }
 authors = [
   { name = "gha-fail-digest contributors" }
 ]
-keywords = ["github-actions", "ci", "logs", "testing", "automation", "coding-agents"]
+keywords = [
+  "github-actions",
+  "github-actions-logs",
+  "ci",
+  "ci-triage",
+  "logs",
+  "test-failure",
+  "automation",
+  "coding-agents",
+  "agent-handoff"
+]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Environment :: Console",

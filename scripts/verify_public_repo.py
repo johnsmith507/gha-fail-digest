@@ -24,6 +24,7 @@ REQUIRED_FILES = {
     "assets/demo.svg",
     "docs/agent-handoff.md",
     "docs/examples.md",
+    "docs/failure-patterns.md",
     "examples/demo-transcript.md",
     "src/gha_fail_digest/cli.py",
     "src/gha_fail_digest/parser.py",
@@ -37,6 +38,7 @@ README_TERMS = [
     "local",
     "no telemetry",
     "GITHUB_TOKEN",
+    "failure patterns",
 ]
 
 FORBIDDEN_PATH_PARTS = {
